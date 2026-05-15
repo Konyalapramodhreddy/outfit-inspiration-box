@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { createBooking } from "@/lib/bookings.functions";
 
@@ -242,6 +242,7 @@ function InnergyPage() {
   const rootRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
+  const [plan, setPlan] = useState<string>("Luminary");
   const planRef = useRef<string>("Luminary");
   const [filter, setFilter] = useState<string>("all");
   const [modalOpen, setModalOpen] = useState(false);
